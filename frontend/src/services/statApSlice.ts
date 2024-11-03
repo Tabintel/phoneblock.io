@@ -1,4 +1,4 @@
-import { STAT_URL } from "@/constant";
+import { STAT_URL } from "@/constants";
 import { apiSlice } from "./apiSlice";
 
 export const StatApiSlice = apiSlice.injectEndpoints({

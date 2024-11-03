@@ -1,12 +1,13 @@
 "use client"
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 import { RxCross2 } from "react-icons/rx";
 import { RegisterFormData } from '@/constants';
-import { ModalContext } from '@/context/ModalContext';
+import { useSelector } from 'react-redux'
 import { slide } from '@/constants/framer';
 const RegisterModal = () => {
-    const { OffRegisterModal, registermodal } = useContext(ModalContext)
+    const { registermodal } = useSelector((store) => store.modal);
+
     const [formValue, setFormValue] = useState({
         password: "",
         name: "",
@@ -34,7 +35,10 @@ const RegisterModal = () => {
                 animate={registermodal ? "enter" : "exit"}
                 exit={"exit"}
                 className="w-full min-h-full md:w-[400px] md:max-w-[450px]  md:min-h-[580px] justify-center relative items-start md:rounded-[10px] flex flex-col gap-6 p-8 bg-white">
-                <div onClick={OffRegisterModal} className="absolute top-4 right-4 text-[#000] cursor-pointer w-10 h-10 flex items-center hover:bg-[#fafafa]  rounded-full justify-center text-xl">
+                <div 
+                // onClick={OffRegisterModal}
+                
+                 className="absolute top-4 right-4 text-[#000] cursor-pointer w-10 h-10 flex items-center hover:bg-[#fafafa]  rounded-full justify-center text-xl">
                     <RxCross2 />
                 </div>
                 <div className="w-full flex flex-col gap-1">

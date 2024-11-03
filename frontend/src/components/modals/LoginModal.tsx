@@ -1,12 +1,13 @@
 "use client"
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 import { RxCross2 } from "react-icons/rx";
 import { LoginFormData } from '@/constants';
-import { ModalContext } from '@/context/ModalContext';
+import { useSelector } from 'react-redux'
+
 import { slide } from '@/constants/framer';
 const LoginModal = () => {
-    const { OffLoginModal, loginmodal } = useContext(ModalContext)
+    const { loginmodal } = useSelector((store) => store.modal);
     const [formValue, setFormValue] = useState({
         password: "",
         email: "",
@@ -32,7 +33,11 @@ const LoginModal = () => {
                 animate={loginmodal ? "enter" : "exit"}
                 exit={"exit"}
                 className="w-full min-h-full md:w-[400px] md:max-w-[450px]  md:min-h-[580px] justify-center relative items-start md:rounded-[10px] flex flex-col gap-12 p-8 bg-white">
-                <div onClick={OffLoginModal} className="absolute top-4 right-4 text-[#000] cursor-pointer w-12 h-12 flex items-center hover:bg-[#fafafa] rounded-full justify-center text-xl">
+                <div 
+                
+                // onClick={OffLoginModal} 
+                
+                className="absolute top-4 right-4 text-[#000] cursor-pointer w-12 h-12 flex items-center hover:bg-[#fafafa] rounded-full justify-center text-xl">
                     <RxCross2 />
                 </div>
                 <div className="w-full flex flex-col gap-1">
