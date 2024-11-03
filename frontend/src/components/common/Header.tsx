@@ -13,7 +13,7 @@ const Header = () => {
         }} className='min-h-[70px] w-full z-40 flex items-center px-4 lg:px-8 bg-[#ffffffa0] border-b gap-8 justify-between'>
             <div className="w-full max-w-custom mx-auto flex items-center justify-between">
                 <div className="flex items-center gap-8 lg:gap-12">
-                    <Link href={'/'} className='text-lg lg:text-xl family2'>HireHalo</Link>
+                    <Link href={'/'} className='text-lg lg:text-xl family2'>Phonebook</Link>
 
                 </div>
 

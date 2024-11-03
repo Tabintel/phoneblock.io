@@ -3,7 +3,7 @@ import { userDashboardLinks } from "@/constants";
 import DashboardLayout from "@/components/common/DashboardLayout";
 
 export const metadata: Metadata = {
-  title: "Recruiter Dashboard  || HireHalo",
+  title: "Recruiter Dashboard  || Phonebook",
   description: "Revamping HR management of your candidates - Connecting Dreams with Opportunities",
 };
 
