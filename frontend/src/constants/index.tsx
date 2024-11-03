@@ -81,7 +81,7 @@ export const whyChooseUs = [
     }, {
         text: "Messaging",
         subtext: "Encrypted messaging for private communications.",
-        icon: <Phone className="h-8 w-8 text-blue-600" />
+        icon: <MessageSquare className="h-8 w-8 text-blue-600" />
     },
 ]
 // ------------- whyChooseUs LISTS END -----------------
