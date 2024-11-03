@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
-import TableCard from "@/components/common/TableCard";
 import { applicantsData } from '@/constants';
+import TableCard from '@/components/common/TableCard';
 const JobsCreated = () => {
     return <div className='px-6 py-8 border rounded-lg flex flex-col w-full gap-6'>
         <div className="w-full flex items-center justify-between gap-4">

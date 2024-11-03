@@ -4,7 +4,6 @@ import { BsLuggage } from "react-icons/bs";
 import Hirings from "./_components/Hirings";
 import Charts from "./_components/Chart";
 import JobsCreated from "./_components/JobsCreated";
-import Candidates from "./_components/Candidates";
 
 export default function Home() {
   const widgetData = [
@@ -40,6 +39,7 @@ export default function Home() {
 
 
             <div className="w-full flex flex-col gap-4">
+              {/* widget */}
               <div className="w-full grid grid-cols-2 gap-4">
                 {/* widget */}
                 {
@@ -82,10 +82,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* candidates */}
-        {/* <Candidates /> */}
         {/* job Applied */}
-        {/* <JobsCreated/> */}
+        <JobsCreated/>
       </div>
     </div>
   );

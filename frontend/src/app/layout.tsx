@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 import ProviderLayout from "@/components/common/ProviderLayout";
 export const metadata: Metadata = {
   title: "PhoneBlock.io",
-  description: "Connecting Dreams with Opportunities",
+  description: "Connecting Dreams with Opportunities, Phoneblock.io",
 };
 
 export default function RootLayout({

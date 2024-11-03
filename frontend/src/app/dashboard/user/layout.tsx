@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { recruiterDashboardLinks } from "@/constants";
+import { userDashboardLinks } from "@/constants";
 import DashboardLayout from "@/components/common/DashboardLayout";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="w-full flex">
-      <DashboardLayout sidebarlinks={recruiterDashboardLinks}>
+      <DashboardLayout sidebarlinks={userDashboardLinks}>
         {children}
       </DashboardLayout>
     </div>

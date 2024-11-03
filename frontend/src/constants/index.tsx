@@ -1,6 +1,8 @@
 
+import { FiSettings } from "react-icons/fi";
+import { BiMessage, BiSolidDashboard, BiStats } from "react-icons/bi";
+import { BsLuggage } from "react-icons/bs";
 // ------------- API REQUEST ROUTE -----------------
-// eslint-disable-next-line no-undef
 export const BASE_URL =
   process.env.NODE_ENV === "development" ? "http://localhost:4000" : "";
 
@@ -14,6 +16,152 @@ export const REVIEW_URL = "/api/v1/review";
 export const STAT_URL = "/api/v1/stat";
 
 // ------------- API REQUEST ROUTE END -----------------
+
+// ------------- USER DASHBOARD LINKS LISTS START -----------------
+export const userDashboardLinks = [
+    {
+        id: 1,
+        tab: {
+            title: "Dashboard",
+            path: "/user",
+            icon: <BiSolidDashboard fontSize={"24px"} />,
+        },
+        list: [],
+    },
+    {
+        id: 200,
+        tab: {
+            icon: <FiSettings fontSize={"20px"} />,
+            title: "Candidate Profile",
+            path: "/user/profile",
+        },
+        list: [],
+    },
+    {
+        id: 61,
+        tab: {
+            icon: <BsLuggage fontSize={"22px"} />,
+            title: "Jobs",
+            path: "/user/jobs",
+        },
+        list: [],
+    },
+    {
+        id: 6,
+        tab: {
+            icon: <BsLuggage fontSize={"22px"} />,
+            title: "Applied Jobs",
+            path: "/user/applied-jobs",
+        },
+        list: [],
+    },
+    {
+        id: 6,
+        tab: {
+            icon: <BiMessage fontSize={"23px"} />,
+            title: "Messages",
+            path: "/user/message",
+        },
+        list: [],
+    },
+]
+// ------------- USER DASHBOARD LINKS LISTS END -----------------
+
+// ------------- USER DASHBOARD WIDGET LISTS START -----------------
+
+export const widgetData = [
+    {
+        title: "Applied Jobs",
+        subtext: "Browse your applied jobs here and check their respective progress..",
+        bgColor: "#cdeed3",
+        icon: <BsLuggage fontSize={"24px"} />,
+        color: "#347345"
+    },
+    {
+        title: "Messages",
+        subtext: "Browse your applied jobs here and check their respective progress..",
+        bgColor: "#deddff",
+        icon: <BiMessage fontSize={"24px"} />,
+        color: "#347345"
+    }, {
+        title: "Pending Jobs",
+        subtext: "Browse your applied jobs here and check their respective progress..",
+        bgColor: "#ffeec3",
+        icon: <BsLuggage fontSize={"24px"} />,
+        color: "#347345"
+    }, {
+        title: "Reviewed Jobs",
+        subtext: "Browse your applied jobs here and check their respective progress..",
+        bgColor: "#f3f3f1",
+        icon: <BsLuggage fontSize={"24px"} />,
+        color: "#347345"
+    },
+]
+// ------------- USER DASHBOARD WIDGET LISTS END -----------------
+
+// ------------- applicantsData DASHBOARD WIDGET LISTS START -----------------
+
+export const applicantsData = [
+    {
+        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
+        jobtitle: "Javascript Developer",
+        joblocation: "onsite",
+        company: "Proxify",
+        ApplicationStatus: "PENDING",
+        bgColor: "#FFE1CC",
+        companyImage: "/images/Proxify.png",
+        applicantName: "Mary Benjamin",
+        applicantLevel: "Senior Developer",
+        dateApplied: "21st November 2024",
+        applicationStatus: "Hiring",
+        applicantImage: "/images/face/avatar_1.jpg"
+    },
+    {
+        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
+        jobtitle: "Senior Phyton Developer",
+        joblocation: "hybrid",
+        company: "Zello",
+        ApplicationStatus: "ACTIVE",
+        bgColor: "#D4F6ED",
+        companyImage: "/images/Zello.png",
+        applicantName: "Dainne Russel",
+        applicantLevel: "Junior Developer",
+        dateApplied: "21st November 2024",
+        applicationStatus: "Hiring",
+        applicantImage: "/images/face/avatar_2.png"
+    },
+    {
+        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
+        jobtitle: "Senior Full Stack Developer",
+        joblocation: "remote",
+        company: "alteroffice",
+        ApplicationStatus: "HIRED",
+        bgColor: "#ffe1cc",
+        companyImage: "/images/alteroffice.png",
+        applicantName: "Phillip Goodwill",
+        applicantLevel: "Junior Developer",
+        dateApplied: "21st November 2024",
+        applicationStatus: "Rejected",
+        applicantImage: "/images/face/avatar_3.png"
+    },
+    {
+        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
+        jobtitle: "Javascript Developer",
+        joblocation: "onsite",
+        company: "Proxify",
+        ApplicationStatus: "PENDING",
+        bgColor: "#FFE1CC",
+        companyImage: "/images/Proxify.png",
+        applicantName: "Mary Benjamin",
+        applicantLevel: "Senior Developer",
+        dateApplied: "21st November 2024",
+        applicationStatus: "Hiring",
+        applicantImage: "/images/face/avatar_1.jpg"
+    },
+
+]
+// ------------- applicantsData DASHBOARD WIDGET LISTS END -----------------
+
 export type ProfileFormDataItem = {
     id: number;
     name: keyof FormValueType; // It ensures the name corresponds to keys in FormValueType

@@ -9,15 +9,15 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
                 <div className="w-full flex flex-col justify-between">
                     <div className="py-2 rounded-md w-full px-3 text-lg lg:text-xl font-normal
                      text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]">
-                        <HiBars3BottomLeft fontSize={'24px'} />   HireHalo
+                        <HiBars3BottomLeft fontSize={'24px'} />   Phoneblock.io
                     </div>
 
                     <div className="py-2 rounded-md w-full px-4 font-normal
                      text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]">
                         <div className="w-6 h-6 rounded-md bg-[#A1718A]"></div>
                         <span className="text-sm family2 family2">
-                            Edidiong Essien
-                            <span className="text-xs block font-normal text-[#969A9A]">Candidate Account</span>
+                            Tabintel Phone
+                            <span className="text-xs block font-normal text-[#969A9A]">User Account</span>
                         </span>
                     </div> 
                     <ol className="pt-3 flex flex-col text-sm family2 gap-1">
@@ -42,8 +42,8 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
                      text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]">
                         <div className="w-8 h-8 rounded-full bg-[#A1718A]"></div>
                         <span className="text-sm family2 family2">
-                            Edidiong Essien
-                            <span className="text-xs block font-normal text-[#969A9A]">Candidate Account</span>
+                            Tabintel Phone
+                            <span className="text-xs block font-normal text-[#969A9A]">User Account</span>
                         </span>
                     </div> 
                 </div>

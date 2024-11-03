@@ -5,8 +5,8 @@ const Charts = () => {
     const [options, setOptions] = useState({
         chart: {
             height: 350,
-            type: "bar",
-            fontFamily: "Karla",
+            type: "line",
+            fontFamily: "Regular",
             foreColor: "#333",
             fontSize: "30px",
             textTransform: "capitalize",
@@ -41,6 +41,10 @@ const Charts = () => {
             name: "Revenue",
             data: [120,30,20,10,30,30,40,40,20,35],
         },
+        {
+            name: "Revenue",
+            data: [120, 30, 20, 10, 30, 30, 40, 40, 20, 35],
+        },
     ]);
     return <div className='px-6 py-8 border rounded-lg flex flex-col w-full gap-6'>
         <h3 className="text-lg block lg:text-xl text-dark family2 family2">
@@ -50,7 +54,7 @@ const Charts = () => {
             <Chart
                 options={options}
                 series={series}
-                type="bar"
+                type="line"
                 width={"100%"}
                 height={"250px"}
             />
