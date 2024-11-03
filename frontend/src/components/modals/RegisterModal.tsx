@@ -46,7 +46,7 @@ const RegisterModal = () => {
                         Sign Up
                     </h3>
                     <h5 className="block text-sm md:text-sm max-w-[250px] pt-1">
-                     Create an account with Phonebook to get instant 
+                     Create an account with Phoneblock to get instant 
                     </h5>
                 </div>
                 <form className="w-full flex flex-col gap-3">

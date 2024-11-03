@@ -6,7 +6,7 @@ export const slideup = {
   animate: (i?:any) => ({
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.5, delay: i * 0.01 },
+    transition: { duration: 0.6, delay: i * 0.015 },
   }),
   exit: {
     opacity: 0,
