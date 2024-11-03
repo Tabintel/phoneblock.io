@@ -32,7 +32,7 @@ const WhyChoose = () => {
                 <ol className="lg:w-[90%] grid mt-4 lg:grid-cols-3 gap-4 lg:gap-6">
                     {
                         whyChooseUs?.map((data, index) => {
-                            return <div key={index} className="w-full justify-between flex flex-col gap-4 min-h-[260px] lg:min-h-[310px]  border p-6 rounded-2xl">
+                            return <div key={index} className="w-full flex flex-col justify-center gap-8 min-h-[260px] lg:min-h-[310px]  border p-6 rounded-2xl">
                                 {
                                     data.icon
                                 }

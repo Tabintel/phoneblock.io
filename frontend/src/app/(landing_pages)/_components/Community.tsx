@@ -4,7 +4,7 @@ import { Network, Wifi, Phone, MessageSquare, ArrowRight, Shield, Users, Zap } f
 const Community = () => {
     return (
         <div className='flex w-full py-20 md:py-32 items-center gap-8 justify-center'>
-            <div className="max-w-custom mx-auto w-[90%] grid lg:grid-cols-custom gap-12 lg:gap-20">
+            <div className="max-w-custom mx-auto w-[90%] grid lg:grid-cols-custom gap-10 lg:gap-20">
                 <div className="w-full flex flex-col gap-4">
                     <h2 className="text-4xl flex-1 lg:text-6xl text-start leading-[1.2] family2 text-dark family2">
                         <span className="pb-4 block font-normal text-xl">
@@ -48,10 +48,10 @@ const Community = () => {
                 </div>
                 <div className="md:w-[500px] grid lg:grid-cols-1 gap-6">
                     <div className="w-full flex flex-col gap-4">
-                        <div className="min-h-[200px] w-full flex relative">
-                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#e8f2fc61] flex p-6 pt-8 flex-col justify-between gap-12">
+                        <div className="min-h-[160px] w-full flex relative">
+                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#e8f2fc61] flex p-6 pt-8 flex-col justify-between gap-10">
                                 <span>
-                                    <Shield className="h-12 w-12 text-blue-600 mb-4" />
+                                    <Shield className="h-10 w-10 text-blue-600 mb-4" />
                                 </span>
                                 <div className="flex flex-col gap-4">
 
@@ -74,10 +74,10 @@ const Community = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className="min-h-[200px] w-full flex relative">
-                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#ffe1cc56] flex p-6 pt-8 flex-col justify-between gap-12">
+                        <div className="min-h-[160px] w-full flex relative">
+                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#ffe1cc56] flex p-6 pt-8 flex-col justify-between gap-10">
                                 <span>
-                                    <Users className="h-12 w-12 text-blue-600 mb-4" />
+                                    <Users className="h-10 w-10 text-blue-600 mb-4" />
                                 </span>
                                 <div className="flex flex-col gap-4">
 
@@ -101,11 +101,11 @@ const Community = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full min-h-[200px] flex flex-col gap-4">
+                    <div className="w-full min-h-[160px] flex flex-col gap-4">
                         <div className="min-h-full w-full flex relative">
-                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#e8f2fc61] flex p-6 pt-8 flex-col justify-between gap-12">
+                            <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#e8f2fc61] flex p-6 pt-8 flex-col justify-between gap-10">
                                 <span>
-                                    <Zap className="h-12 w-12 text-blue-600 mb-4" />
+                                    <Zap className="h-10 w-10 text-blue-600 mb-4" />
                                 </span>
                                 <div className="flex flex-col gap-4">
                                     <h3 className="text-3xl pb-6 border-b lg:text-4xl leading-[1.2] family2 text-dark family2">
