@@ -1,5 +1,6 @@
 
 import { FiSettings } from "react-icons/fi";
+import { Network, Wifi, Phone, MessageSquare, ArrowRight, Shield, Users, Zap } from 'lucide-react'
 import { BiMessage, BiSolidDashboard, BiStats } from "react-icons/bi";
 import { BsLuggage } from "react-icons/bs";
 // ------------- API REQUEST ROUTE -----------------
@@ -66,6 +67,25 @@ export const userDashboardLinks = [
     },
 ]
 // ------------- USER DASHBOARD LINKS LISTS END -----------------
+// ------------- whyChooseUs LISTS START -----------------
+export const whyChooseUs = [
+    {
+        text: "Internet Access",
+        subtext: "High-speed internet through our decentralized network.",
+        icon: <Wifi className="h-8 w-8 text-blue-600" />
+    },
+    {
+        text: "Phone Services",
+        subtext:"Crystal-clear voice calls over our secure network.",  
+        icon: <Phone className="h-8 w-8 text-blue-600" />
+    }, {
+        text: "Messaging",
+        subtext: "Encrypted messaging for private communications.",
+        icon: <Phone className="h-8 w-8 text-blue-600" />
+    },
+]
+// ------------- whyChooseUs LISTS END -----------------
+
 
 // ------------- USER DASHBOARD WIDGET LISTS START -----------------
 

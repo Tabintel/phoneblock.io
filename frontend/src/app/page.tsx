@@ -1,5 +1,4 @@
 import Hero from "./(landing_pages)/_components/Hero";
-import TopCompanies from "./(landing_pages)/_components/TopCompanies";
 import Achievement from "./(landing_pages)/_components/Achievement";
 import Community from "./(landing_pages)/_components/Community";
 import WhyChoose from "./(landing_pages)/_components/WhyChoose";

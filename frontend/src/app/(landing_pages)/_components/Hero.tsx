@@ -1,6 +1,5 @@
-import Link from 'next/link';
+
 import React from 'react';
-import Image from 'next/image';
 const Hero = () => {
     return <div className=' min-h-[750px] py-12 lg:py-24 flex items-center gap-8 justify-center'>
         <div className="max-w-custom mx-auto w-[90%] grid grid-cols-1 gap-4">
@@ -8,7 +7,7 @@ const Hero = () => {
                 <div className="px-6 py-2 max-w-[300px] border bg-[#deddff5b] rounded-full text-sm text-[#3e3aff] family2">
                     #1 Trending on Crypto Network 
                 </div>
-                <h2 className="text-4xl max-w-[980px] md:mx-auto leading-[1.1] lg:text-7xl lg:text-center family2 text-dark family2">
+                <h2 className="text-4xl max-w-[980px] capitalize md:mx-auto leading-[1.1] lg:text-7xl lg:text-center text-dark family2">
                    Revolutionized your transactions with
                     Decentralized Telecom Network
                 </h2>

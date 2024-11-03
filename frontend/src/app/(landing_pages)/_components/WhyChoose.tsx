@@ -1,10 +1,8 @@
-import Link from 'next/link';
+
 import React from 'react';
 import Image from 'next/image';
-import { whyChooseUs } from "@/constants";
-import JobCard from "@/components/common/JobCard";
-import { BsSearch } from 'react-icons/bs';
 import AnimateTextWord from '@/components/common/AnimateTextWord';
+import { whyChooseUs } from '@/constants';
 
 const WhyChoose = () => {
     return <div className='min-h-[500px] lg:min-h-[550px] py-16 flex items-center gap-8 justify-center'>
@@ -12,30 +10,33 @@ const WhyChoose = () => {
             <div className="w-full flex flex-col items-center justify-center gap-8">
                 <span className='text-base lg:text-lg font-normal lg:text-center max-w-[500px]'>
                     <AnimateTextWord type='bigtext_Center'>
-                        Choose Us
+                        Our Features
                     </AnimateTextWord>
-
                 </span>
-                <h2 className="text-4xl lg:text-7xl max-w-[600px] mx-auto lg:text-center leading-[1.2] family2 text-dark family2">
-                    <AnimateTextWord type='bigtext_Center'>
-                        Why Connect is right for you?
-                    </AnimateTextWord>
+                <div className="flex flex-col gap-4 lg:items-center lg:justify-center ">
+                    <h2 className="text-4xl lg:text-7xl max-w-[900px] mx-auto lg:text-center leading-[1.2] family2 text-dark family2">
+                        <AnimateTextWord type='bigtext_Center'>
+                            Innovative Features of Phoneblock
+                        </AnimateTextWord>
+                    </h2>
+                    <span className='text-base lg:text-xl font-normal lg:text-center max-w-[360px] lg:max-w-[600px]'>
+                        <AnimateTextWord>
 
-                </h2>
+                            Access and provide communication services through a decentralized, node-based network. Earn rewards while connecting communities.
+
+                        </AnimateTextWord>
+                    </span>
+                </div>
             </div>
             <div className="w-full flex flex-col items-center justify-center gap-4">
-                <div className="flex p-4 items-center flex-wrap gap-4">
-                    <button className="text-sm lg:text-sm px-4 lg:px-6 py-4 border rounded-full text-white bg-[#3e3aff] shadows">Popular Company</button>
-                    <button className="text-sm lg:text-sm px-4 lg:px-6 py-4 rounded-full shadows border">Recommended Jobs</button>
-                    <button className="text-sm lg:text-sm px-4 lg:px-6 py-4 rounded-full shadows border">New Jobs</button>
-
-                </div>
-                <ol className="lg:w-[90%] grid mt-4 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+                <ol className="lg:w-[90%] grid mt-4 lg:grid-cols-3 gap-4 lg:gap-6">
                     {
                         whyChooseUs?.map((data, index) => {
                             return <div key={index} className="w-full justify-between flex flex-col gap-4 min-h-[260px] lg:min-h-[310px]  border p-6 rounded-2xl">
-                                <div className="w-full flex items-center justify-between"></div>
-                                <h4 className="text-xl lg:text-3xl">
+                                {
+                                    data.icon
+                                }
+                                <h4 className="text-2xl lg:text-3xl">
                                     <span className="family2">
                                         <AnimateTextWord type='bigtext'>
                                             {
@@ -44,7 +45,7 @@ const WhyChoose = () => {
                                         </AnimateTextWord>
 
                                     </span>
-                                    <span className="block text-sm pt-3 font-normal">
+                                    <span className="block text-sm md:etxt-base py-3 font-normal">
 
                                         <AnimateTextWord>
                                             {data?.subtext}
