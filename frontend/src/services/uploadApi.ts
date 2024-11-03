@@ -1,4 +1,4 @@
-import { UPLOAD_URL } from "@/constant";
+import { UPLOAD_URL } from "@/constants";
 import { apiSlice } from "./apiSlice";
 
 export const uploadApiSlice = apiSlice.injectEndpoints({

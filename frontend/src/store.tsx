@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { apiSlice } from "./services/apiSlice";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import authReducer from "./services/authSlice"; // Use default export
+import authReducer from "./services/authSlice";
 import cartReducer from "./services/cartSlice";
 import modalReducer from "./services/modalSlice";
 
