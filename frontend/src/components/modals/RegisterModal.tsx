@@ -5,7 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RegisterFormData } from '@/constants';
 import { useSelector, useDispatch } from 'react-redux'
 import { slide } from '@/constants/framer';
-import { offRegisterModal, onWalletModal } from '@/services/modalSlice';
+import { offRegisterModal, onWalletModal, onLoginModal } from '@/services/modalSlice';
 const RegisterModal = () => {
     const { registermodal } = useSelector((store) => store.modal);
 
@@ -22,8 +22,11 @@ const RegisterModal = () => {
 
     const handleOnWalletModal = () => {
         dispatch(offRegisterModal(""))
-
         dispatch(onWalletModal(""))
+    }
+    const handleOnLoginModal = () => {
+        dispatch(offRegisterModal(""))
+        dispatch(onLoginModal(""))
     }
     return (
         <motion.div
@@ -96,7 +99,7 @@ const RegisterModal = () => {
                             <span className="text-sm font-normal text-dark">
                                 <span className="">Not yet a Member?</span>{" "}
                                 <span
-                                    // onClick={handleLoginModal}
+                                    onClick={handleOnLoginModal}
                                     style={{ textDecoration: "underline" }}
                                     className="font-booking_font_bold family2 cursor-pointer"
                                 >
