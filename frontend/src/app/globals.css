@@ -61,7 +61,7 @@ text color style end
 */
 /* button styles */
 .btn {
-  min-height: 50px;
+  min-height: 46px;
   /* min-width: 130px; */
   border-radius: 50px;
   background-color: var(--button_color);
@@ -87,7 +87,8 @@ text color style end
   transition: all 0.3s;
 }
 .btn.btn_2:hover {
-  color: var(--button_color);
+  color: #fff;
+  background-color: var(--background_dark);
   transition: all 0.3s;
   border: 1px solid var(--background_dark);
   box-shadow: 0 0 0 6px var(--shadow_color);
@@ -96,14 +97,14 @@ text color style end
 
 /* input styles */
 .input {
-  min-height: 49px;
+  min-height: 45px;
   transition: all 0.3s;
   border: 1.5px solid #e7e7e9;
   padding: 0 1rem;
   background-color: #fff !important;
 }
 form input {
-  min-height: 49px;
+  min-height: 45px;
   transition: all 0.3s;
   border: 1.5px solid #e7e7e9;
   padding: 0 1rem;

@@ -3,11 +3,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 import { RxCross2 } from "react-icons/rx";
 import { LoginFormData } from '@/constants';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { slide } from '@/constants/framer';
+import { offLoginModal, onRegisterModal, onWalletModal } from '@/services/modalSlice';
+import Link from 'next/link';
 const LoginModal = () => {
     const { loginmodal } = useSelector((store) => store.modal);
+    const dispatch = useDispatch()
+
     const [formValue, setFormValue] = useState({
         password: "",
         email: "",
@@ -15,6 +19,14 @@ const LoginModal = () => {
     let loginisLoading = false;
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValue({ ...formValue, [e.target.name]: e.target.value })
+    }
+    const handleOnWalletModal = ()=> {
+        dispatch(offLoginModal(""))
+        dispatch(onWalletModal(""))
+    }
+    const handleOnRegistertModal = () => {
+        dispatch(offLoginModal(""))
+        dispatch(onRegisterModal(""))
     }
     return (
         <motion.div
@@ -33,19 +45,19 @@ const LoginModal = () => {
                 animate={loginmodal ? "enter" : "exit"}
                 exit={"exit"}
                 className="w-full min-h-full md:w-[400px] md:max-w-[450px]  md:min-h-[580px] justify-center relative items-start md:rounded-[10px] flex flex-col gap-12 p-8 bg-white">
-                <div 
-                
-                // onClick={OffLoginModal} 
-                
-                className="absolute top-4 right-4 text-[#000] cursor-pointer w-12 h-12 flex items-center hover:bg-[#fafafa] rounded-full justify-center text-xl">
+                <div
+
+                    onClick={() => dispatch(offLoginModal(""))}
+
+                    className="absolute top-4 right-4 text-[#000] cursor-pointer w-12 h-12 flex items-center hover:bg-[#fafafa] rounded-full justify-center text-xl">
                     <RxCross2 />
                 </div>
                 <div className="w-full flex flex-col gap-1">
                     <h3 className="text-3xl md:text-3xl family2">
-                        Sign In
+                        Welcome to Phoneblock
                     </h3>
                     <span className="block text-sm md:text-sm max-w-[250px] pt-1">
-                        Login to your account and check out your bookings
+                        Sign In to access your account
                     </span>
                 </div>
                 <form className="w-full flex flex-col gap-3">
@@ -84,9 +96,9 @@ const LoginModal = () => {
                         </button>
                         <div className="w-full flex items-center justify-start gap-2">
                             <span className="text-sm font-normal text-dark">
-                                <span className="">Not yet a Member?</span>{" "}
+                                <span className="">Dont have an account?</span>{" "}
                                 <span
-                                    // onClick={handleLoginModal}
+                                    onClick={handleOnRegistertModal}
                                     style={{ textDecoration: "underline" }}
                                     className="font-booking_font_bold family2 cursor-pointer"
                                 >
@@ -94,6 +106,14 @@ const LoginModal = () => {
                                 </span>
                             </span>
                         </div>
+                    </div>
+
+                    <div
+                        onClick={handleOnWalletModal}
+                        data-test="connect_with_wallet"
+                        className="p-3 px-8 flex btn btn_2 items-center justify-center w-full cursor-pointer rounded-md regular"
+                    >
+                        Connect with Web3 Wallet
                     </div>
                 </form>
             </motion.div>

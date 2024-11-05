@@ -1,10 +1,12 @@
 "use client"
 import Link from 'next/link';
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import React from 'react';
+import { onLoginModal, onRegisterModal } from '@/services/modalSlice';
 
 const Header = () => {
     // console.log(loginmodal);
+    const dispatch = useDispatch()
     return <div className=" sticky z-40 top-0">
         <div style={{
             backdropFilter: "blur(14px)"
@@ -23,12 +25,15 @@ const Header = () => {
                 </div>
                 <div className="flex items-center justify-end gap-2 md:gap-4">
                     <span className=''>
-                        <button 
-                        className="text-sm lg:text-sm px-4 lg:px-6 py-3 border rounded-full text-white bg-[#3e3aff] shadows">Join with Us</button>
+                        <button
+                            onClick={() => dispatch(onLoginModal(""))}
+                            className="text-sm lg:text-sm px-4 lg:px-6 py-3 border rounded-full text-white bg-[#3e3aff] shadows">Join with Us</button>
                     </span>
                     <button
-                    //  onClick={OnRegisterModal}
-                     className="text-sm lg:text-sm px-4 lg:px-6 py-3 rounded-full shadows border">Sign Up</button>
+                        onClick={() =>
+                            dispatch(onRegisterModal(""))
+                        }
+                        className="text-sm lg:text-sm px-4 lg:px-6 py-3 rounded-full shadows border">Sign Up</button>
                 </div>
             </div>
         </div>

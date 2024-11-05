@@ -3,20 +3,25 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 import { RxCross2 } from "react-icons/rx";
 import { RegisterFormData } from '@/constants';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { slide } from '@/constants/framer';
+import { offRegisterModal, onWalletModal } from '@/services/modalSlice';
 const RegisterModal = () => {
     const { registermodal } = useSelector((store) => store.modal);
 
     const [formValue, setFormValue] = useState({
         password: "",
         name: "",
-        username: "",
         email: "",
     })
     let loginisLoading = false;
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValue({ ...formValue, [e.target.name]: e.target.value })
+    }
+    const dispatch = useDispatch()
+
+    const handleOnWalletModal = () => {
+        dispatch(onWalletModal(""))
     }
     return (
         <motion.div
@@ -35,18 +40,20 @@ const RegisterModal = () => {
                 animate={registermodal ? "enter" : "exit"}
                 exit={"exit"}
                 className="w-full min-h-full md:w-[400px] md:max-w-[450px]  md:min-h-[580px] justify-center relative items-start md:rounded-[10px] flex flex-col gap-6 p-8 bg-white">
-                <div 
-                // onClick={OffRegisterModal}
-                
-                 className="absolute top-4 right-4 text-[#000] cursor-pointer w-10 h-10 flex items-center hover:bg-[#fafafa]  rounded-full justify-center text-xl">
+                <div
+                    onClick={() =>
+                        dispatch(offRegisterModal(""))
+                    }
+
+                    className="absolute top-4 right-4 text-[#000] cursor-pointer w-10 h-10 flex items-center hover:bg-[#fafafa]  rounded-full justify-center text-xl">
                     <RxCross2 />
                 </div>
                 <div className="w-full flex flex-col gap-1">
                     <h3 className="text-3xl md:text-3xl family2">
-                        Sign Up
+                        Sign Up to Phoneblock
                     </h3>
                     <h5 className="block text-sm md:text-sm max-w-[250px] pt-1">
-                     Create an account with Phoneblock to get instant 
+                        Create an account with Phoneblock to get instant
                     </h5>
                 </div>
                 <form className="w-full flex flex-col gap-3">
@@ -95,6 +102,13 @@ const RegisterModal = () => {
                                 </span>
                             </span>
                         </div>
+                    </div>
+                    <div
+                        onClick={handleOnWalletModal}
+                        data-test="connect_with_wallet"
+                        className="p-3 px-8 flex btn btn_2 items-center justify-center w-full cursor-pointer rounded-md regular"
+                    >
+                        Connect with Web3 Wallet
                     </div>
                 </form>
             </motion.div>

@@ -1,10 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import toast from "react-hot-toast";
 const initialState = {
   savedRooms: [],
   loginmodal: false,
   registermodal: false,
-  cartmodal: false,
+  walletmodal: false,
 };
 
 export const modalSlice = createSlice({
@@ -25,19 +24,19 @@ export const modalSlice = createSlice({
       state.registermodal = false;
     },
 
-    onCartModal: (state, action) => {
-      state.cartmodal = true;
+    onWalletModal: (state, action) => {
+      state.walletmodal = true;
     },
-    offCartModal: (state, action) => {
-      state.cartmodal = false;
+    offWalletModal: (state, action) => {
+      state.walletmodal = false;
     },
   },
 });
 
 export const {
   onLoginModal,
-  onCartModal,
-  offCartModal,
+  onWalletModal,
+  offWalletModal,
   offLoginModal,
   onRegisterModal,
   offRegisterModal,

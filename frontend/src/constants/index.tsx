@@ -220,7 +220,6 @@ export type RegisterValueType = {
     email: string;
     password: string;
     name: string;
-    username: string;
 };
 export type RegisterFormDataItem = {
     id: number;
@@ -311,14 +310,6 @@ export const RegisterFormData: RegisterFormDataItem[] = [
         type: "text",
         text: "Name",
         label: "Jane Doe",
-        required: true,
-    },
-    {
-        id: 12,
-        name: "username",
-        type: "text",
-        text: "UserName",
-        label: "JaneDoe@",
         required: true,
     },
     {

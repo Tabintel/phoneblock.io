@@ -5,9 +5,10 @@ import { AnimatePresence } from "framer-motion";
 import LoginModal from '../modals/LoginModal';
 import RegisterModal from '../modals/RegisterModal';
 import { Provider, useSelector } from 'react-redux'
+import WalletModal from '../modals/WalletModal';
 const ModalContextLayout = ({ children }: { children: React.ReactNode }) => {
     // const { loginmodal, registermodal, jobdetailsidebar } = usese(ModalContext)
-    const { loginmodal, registermodal } = useSelector((store) => store.modal);
+    const { loginmodal, registermodal, walletmodal } = useSelector((store) => store.modal);
     return (
         <React.Fragment>
             {/* animating the login modal */}
@@ -18,7 +19,10 @@ const ModalContextLayout = ({ children }: { children: React.ReactNode }) => {
             <AnimatePresence mode='wait' >
                 {registermodal && <RegisterModal />}
             </AnimatePresence>
-
+            {/* animating the wallet modal */}
+            <AnimatePresence mode='wait' >
+                {walletmodal && <WalletModal />}
+            </AnimatePresence>
             {children}
         </React.Fragment>
     )
