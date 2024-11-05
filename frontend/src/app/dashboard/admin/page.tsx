@@ -1,7 +1,7 @@
 
 "use client"
 import Charts from "./_components/Chart";
-import JobsCreated from "./_components/JobsCreated";
+import TabularData from "./_components/TabularData";
 import Widget from "./_components/Widget";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
           {/* widget data listings */}
           <Widget />
           <Charts />
-          <JobsCreated />
+          <TabularData />
         </div>
 
       </div>

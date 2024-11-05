@@ -102,37 +102,27 @@ const TableCard = ({ tabledata, type, tableheadList }: {
                 <tr>
                     {
                         tableheadList?.map((data, index) => {
-                            return <th className="text-sm py-8 bg-[#fafafa] px-3 text-[#969A9A] font-normal" key={index}>{data}</th>
+                            return <th className="text-sm py-4 bg-[#fafafa] px-3 text-[#969A9A] font-normal" key={index}>{data}</th>
                         })
                     }
                 </tr>
             </thead>
             <tbody className="text-sm font-normal">
                 {
-                    tabledata?.map((data?: any, index: any) => {
-                        return <tr key={index} className="px-4 border-b hover:bg-[#eee] cursor-pointer text-start py-6">
+                    tabledata?.map((data: any, index: any) => {
+                        return <tr key={index} className="px-4 border-b hover:bg-[#eee] cursor-pointer py-6">
 
-                            <td className=" font-normal py-6 flex items-center justify-center text-center">
-                                <Image
-                                    src={data?.companyImage}
-                                    width={50}
-                                    height={50}
-                                    alt="Comapny's Logo"
-                                />
+                            <td className=" font-normal py-4 flex items-center justify-center text-center">
+                                10232
                             </td>
-                            <td className="text-base family2 py-6 text-center">{data?.company}
+                            <td className="text-base family2 py-4 text-center">{data?.name}
                             </td>
-                            <td className=" font-normal py-6 text-center">   {data?.jobtitle} </td>
+                            <td className=" font-normal py-4 text-center">   {data?.email} </td>
 
-                            <td className="py-6 text-center">
+                            <td className="py-4 text-center">
                                 24th October 2024
                             </td>
-                            <td className=" font-normal py-6 text-center">
-                                <Link href="user/applied-jobs" className="shadows text-xs px-3 py-3 border rounded-md bg-[#fafafa]">
-                                    View Application
-                                </Link>
-                            </td>
-                            <td className=" family2 py-6 text-center">
+                            <td className=" family2 py-4 text-center">
                                 <div className="w-full flex items-center  justify-center">
                                     <div className="w-10 h-10 rounded-full hover:bg-[#deddff] flex justify-center items-center">
                                         <BsTrash color={"#c31212"} />

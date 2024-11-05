@@ -1,7 +1,10 @@
 
 import { FiSettings } from "react-icons/fi";
-import { Network, Wifi, Phone, MessageSquare, ArrowRight, Shield, Users, Zap } from 'lucide-react'
-import { BiMessage, BiSolidDashboard, BiStats } from "react-icons/bi";
+import { Wifi, Phone, MessageSquare} from 'lucide-react'
+import { IoMail } from "react-icons/io5";
+import { BiMessage, BiSolidDashboard } from "react-icons/bi";
+import { RiNodeTree } from "react-icons/ri";
+import { HiUsers } from "react-icons/hi2";
 import { BsLuggage } from "react-icons/bs";
 // ------------- API REQUEST ROUTE -----------------
 export const BASE_URL =
@@ -32,7 +35,7 @@ export const userDashboardLinks = [
     {
         id: 200,
         tab: {
-            icon: <FiSettings fontSize={"20px"} />,
+            icon: <HiUsers fontSize={"20px"} />,
             title: "Users",
             path: "/admin/customers",
         },
@@ -41,7 +44,7 @@ export const userDashboardLinks = [
     {
         id: 61,
         tab: {
-            icon: <BsLuggage fontSize={"22px"} />,
+            icon: <IoMail fontSize={"22px"} />,
             title: "Subscriptions",
             path: "/admin/subscription",
         },
@@ -50,7 +53,7 @@ export const userDashboardLinks = [
     {
         id: 6,
         tab: {
-            icon: <BsLuggage fontSize={"22px"} />,
+            icon: <RiNodeTree fontSize={"22px"} />,
             title: "Nodes",
             path: "/admin/nodes",
         },
@@ -114,62 +117,17 @@ export const widgetData = [
 
 export const applicantsData = [
     {
-        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
-        jobtitle: "Javascript Developer",
-        joblocation: "onsite",
-        company: "Proxify",
-        ApplicationStatus: "PENDING",
-        bgColor: "#FFE1CC",
-        companyImage: "/images/Proxify.png",
-        applicantName: "Mary Benjamin",
-        applicantLevel: "Senior Developer",
-        dateApplied: "21st November 2024",
-        applicationStatus: "Hiring",
-        applicantImage: "/images/face/avatar_1.jpg"
+        name: "Mellisa Daniel",
+        username: "mellisa12",
+        email: "mellisa@gmail.com",
+        image:
+            "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/melissa-darmel-200x200.jpg",
+        role: "SELLER",
+        experience: 20,
+        location: "New York, United States",
+        status: "ACTIVE",
+        phone: " (555) 603-1724",
     },
-    {
-        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
-        jobtitle: "Senior Phyton Developer",
-        joblocation: "hybrid",
-        company: "Zello",
-        ApplicationStatus: "ACTIVE",
-        bgColor: "#D4F6ED",
-        companyImage: "/images/Zello.png",
-        applicantName: "Dainne Russel",
-        applicantLevel: "Junior Developer",
-        dateApplied: "21st November 2024",
-        applicationStatus: "Hiring",
-        applicantImage: "/images/face/avatar_2.png"
-    },
-    {
-        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
-        jobtitle: "Senior Full Stack Developer",
-        joblocation: "remote",
-        company: "alteroffice",
-        ApplicationStatus: "HIRED",
-        bgColor: "#ffe1cc",
-        companyImage: "/images/alteroffice.png",
-        applicantName: "Phillip Goodwill",
-        applicantLevel: "Junior Developer",
-        dateApplied: "21st November 2024",
-        applicationStatus: "Rejected",
-        applicantImage: "/images/face/avatar_3.png"
-    },
-    {
-        jobdescription: "We're looking for a skilled creative to join our team, focusing on creating top-quality landing pages.",
-        jobtitle: "Javascript Developer",
-        joblocation: "onsite",
-        company: "Proxify",
-        ApplicationStatus: "PENDING",
-        bgColor: "#FFE1CC",
-        companyImage: "/images/Proxify.png",
-        applicantName: "Mary Benjamin",
-        applicantLevel: "Senior Developer",
-        dateApplied: "21st November 2024",
-        applicationStatus: "Hiring",
-        applicantImage: "/images/face/avatar_1.jpg"
-    },
-
 ]
 // ------------- applicantsData DASHBOARD WIDGET LISTS END -----------------
 

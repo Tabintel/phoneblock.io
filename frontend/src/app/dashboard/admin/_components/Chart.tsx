@@ -5,7 +5,7 @@ const Charts = () => {
     const [options, setOptions] = useState({
         chart: {
             height: 350,
-            type: "line",
+            type: "bar",
             fontFamily: "Regular",
             foreColor: "#333",
             fontSize: "30px",
@@ -17,7 +17,7 @@ const Charts = () => {
         dataLabels: {
             enabled: false,
         },
-        colors: ["#2E0266", "var(--primary)"],
+        colors: ["#2E0266", "#E3413F"],
         stroke: {
             curve: "smooth",
         },
@@ -43,20 +43,25 @@ const Charts = () => {
         },
         {
             name: "Revenue",
-            data: [120, 30, 20, 10, 30, 30, 40, 40, 20, 35],
+            data: [100, 40, 10, 50, 20, 10, 60, 20, 50, 45],
         },
     ]);
-    return <div className='px-6 py-8 border rounded-lg flex flex-col w-full gap-6'>
-        <h3 className="text-lg block lg:text-xl text-dark family2 family2">
-            Job Created
-        </h3>
-        <div className="w-full">
+    return <div className='py-8 border rounded-lg flex flex-col w-full gap-6'>
+        <div className="px-4 flex flex-col gap-1">
+            <h3 className="text-xl block lg:text-2xl text-dark family2">
+                Network Overview
+            </h3>
+            <h4 className="text-sm block lg:text-base text-dark">
+                An overview of your user and node growth over time.
+            </h4>
+        </div>
+        <div className="w-full px-2">
             <Chart
                 options={options}
                 series={series}
-                type="line"
+                type="bar"
                 width={"100%"}
-                height={"450px"}
+                height={"400px"}
             />
         </div>
     </div>;
