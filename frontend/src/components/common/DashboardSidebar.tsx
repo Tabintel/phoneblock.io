@@ -7,7 +7,7 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
         <div className='w-[310px] bg-[#121212] lg:block hidden h-[100vh] overflow-auto sticky top-0'>
             <div className="w-full h-full px-3 py-3 flex flex-col justify-between">
                 <div className="w-full flex flex-col justify-between">
-                    <div className="py-2 rounded-md w-full px-3 text-lg lg:text-xl font-normal
+                    <div className="py-2 rounded-md w-full px-3 text-lg lg:text-xl family2
                      text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]">
                         <HiBars3BottomLeft fontSize={'24px'} />   Phoneblock.io
                     </div>
@@ -19,7 +19,7 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
                             Tabintel Phone
                             <span className="text-xs block font-normal text-[#969A9A]">User Account</span>
                         </span>
-                    </div> 
+                    </div>
                     <ol className="pt-3 flex flex-col text-sm family2 gap-1">
                         {
                             sidebarlinks?.map((data, index) => {
@@ -45,7 +45,7 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
                             Tabintel Phone
                             <span className="text-xs block font-normal text-[#969A9A]">User Account</span>
                         </span>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

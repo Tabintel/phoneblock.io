@@ -9,11 +9,11 @@ const DashboardHeader = ({ }) => {
         backdropFilter: "blur(14px)"
     }} className='h-[85px] border-b border-[rgba(0,0,0,.08)] bg-[#ffffff4e] flex z-40 sticky top-0 items-center justify-between'>
         <div className="w-full px-4 max-w-custom mx-auto flex items-center justify-between">
-            <form action="" className='max-w-[250px] lg:max-w-[400px] lg:w-[300px] flex items-center relative'>
+            <form action="" className='max-w-[150px] lg:w-[140px] flex items-center relative'>
                 <span className="w-4 h-4 absolute left-6">
                     <BsSearch />
                 </span>
-                <input type="text" placeholder='Search by job title, skill, tags' className="text-sm pl-12 font-normal bg-white rounded-full w-full " />
+                <input type="text" placeholder='Search ..' className="text-sm pl-12 font-normal bg-white rounded-full w-full " />
             </form>
 
             <div className="flex justify-end relative items-center gap-4">

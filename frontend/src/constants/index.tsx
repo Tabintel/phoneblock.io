@@ -24,7 +24,7 @@ export const userDashboardLinks = [
         id: 1,
         tab: {
             title: "Dashboard",
-            path: "/user",
+            path: "/admin",
             icon: <BiSolidDashboard fontSize={"24px"} />,
         },
         list: [],
@@ -33,8 +33,8 @@ export const userDashboardLinks = [
         id: 200,
         tab: {
             icon: <FiSettings fontSize={"20px"} />,
-            title: "Candidate Profile",
-            path: "/user/profile",
+            title: "Users",
+            path: "/admin/customers",
         },
         list: [],
     },
@@ -42,8 +42,8 @@ export const userDashboardLinks = [
         id: 61,
         tab: {
             icon: <BsLuggage fontSize={"22px"} />,
-            title: "Jobs",
-            path: "/user/jobs",
+            title: "Subscriptions",
+            path: "/admin/subscription",
         },
         list: [],
     },
@@ -51,17 +51,8 @@ export const userDashboardLinks = [
         id: 6,
         tab: {
             icon: <BsLuggage fontSize={"22px"} />,
-            title: "Applied Jobs",
-            path: "/user/applied-jobs",
-        },
-        list: [],
-    },
-    {
-        id: 6,
-        tab: {
-            icon: <BiMessage fontSize={"23px"} />,
-            title: "Messages",
-            path: "/user/message",
+            title: "Nodes",
+            path: "/admin/nodes",
         },
         list: [],
     },
