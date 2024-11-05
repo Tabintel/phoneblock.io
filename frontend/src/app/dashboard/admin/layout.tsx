@@ -3,8 +3,8 @@ import { userDashboardLinks } from "@/constants";
 import DashboardLayout from "@/components/common/DashboardLayout";
 
 export const metadata: Metadata = {
-  title: "Recruiter Dashboard  || Phoneblock",
-  description: "Revamping HR management of your candidates - Connecting Dreams with Opportunities",
+  title: "Admin Dashboard  || Phoneblock",
+  description: "Revamping blokchain management of web resources - Connecting Dreams with Opportunities through blockchain!!",
 };
 
 export default function RootLayout({
