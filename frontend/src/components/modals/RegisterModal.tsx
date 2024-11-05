@@ -21,6 +21,8 @@ const RegisterModal = () => {
     const dispatch = useDispatch()
 
     const handleOnWalletModal = () => {
+        dispatch(offRegisterModal(""))
+
         dispatch(onWalletModal(""))
     }
     return (
