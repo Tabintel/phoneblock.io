@@ -46,7 +46,7 @@ const Charts = () => {
             data: [100, 40, 10, 50, 20, 10, 60, 20, 50, 45],
         },
     ]);
-    return <div className='py-8 border rounded-lg flex flex-col w-full gap-6'>
+    return <div className='py-8 border rounded-xl flex flex-col w-full gap-6'>
         <div className="px-4 flex flex-col gap-1">
             <h3 className="text-xl block lg:text-2xl text-dark family2">
                 Network Overview

@@ -4,7 +4,7 @@ import { applicantsData } from '@/constants';
 import TableCard from '@/components/common/TableCard';
 const TabularData = () => {
     return (
-        <div className='px-6 py-8 border rounded-lg flex flex-col w-full gap-4'>
+        <div className='px-6 py-8 border rounded-xl flex flex-col w-full gap-4'>
             <div className="w-full flex items-center justify-between gap-4">
                 <h3 className="text-xl block lg:text-xl text-dark family2 family2">
                     User Overview
