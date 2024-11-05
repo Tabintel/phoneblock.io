@@ -24,8 +24,7 @@ const DashboardSidebar = ({ sidebarlinks }: { sidebarlinks?: { id: number; tab: 
                         {
                             sidebarlinks?.map((data, index) => {
                                 return <li key={index} className="w-full">
-                                    <Link href={`/dashboard${data.tab.path}`} className='flex py-3 hover:text-white text-[#969a9acb] family2
-                                 rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4'>
+                                    <Link href={`/dashboard${data.tab.path}`} className='flex py-3 hover:text-white text-[#969a9acb] family2 rounded-xl px-3 hover:bg-[#282c2b] w-full items-center gap-4'>
                                         <span className=''>
                                             {data?.tab?.icon}
                                         </span>   <span className="flex-1">

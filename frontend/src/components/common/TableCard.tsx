@@ -20,7 +20,7 @@ const TableCard = ({ tabledata, type, tableheadList }: {
                     <tr>
                         {
                             tableheadList?.map((data, index) => {
-                                return <th className="text-sm py-6 bg-[#fafafa] px-3 text-[#969A9A] font-normal" key={index}>{data}</th>
+                                return <th key={index} className="text-sm py-6 bg-[#fafafa] px-3 text-[#969A9A] font-normal">{data}</th>
                             })
                         }
                     </tr>
@@ -28,7 +28,7 @@ const TableCard = ({ tabledata, type, tableheadList }: {
                 <tbody className="text-sm font-normal">
                     {
                         tabledata?.map((data?: any, index?: any) => {
-                            return <tr key={index} className="px-4 hover:bg-[#eee] border-b cursor-pointer text-start py-6" key={data?.id}>
+                            return <tr key={index} className="px-4 hover:bg-[#eee] border-b cursor-pointer text-start py-6">
 
                                 <td className=" font-normal py-6 text-center">
                                     {/* <Image
@@ -109,8 +109,8 @@ const TableCard = ({ tabledata, type, tableheadList }: {
             </thead>
             <tbody className="text-sm font-normal">
                 {
-                    tabledata?.map((data?: any, _?: any) => {
-                        return <tr className="px-4 border-b hover:bg-[#eee] cursor-pointer text-start py-6" key={data?.id}>
+                    tabledata?.map((data?: any, index: any) => {
+                        return <tr key={index} className="px-4 border-b hover:bg-[#eee] cursor-pointer text-start py-6">
 
                             <td className=" font-normal py-6 flex items-center justify-center text-center">
                                 <Image
