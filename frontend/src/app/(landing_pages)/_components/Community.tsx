@@ -1,7 +1,13 @@
+"use client"
+import Link from 'next/link';
+import { useDispatch } from 'react-redux'
 import React from 'react';
+import { onLoginModal, onRegisterModal } from '@/services/modalSlice';
 import AnimateTextWord from '@/components/common/AnimateTextWord';
-import { Network, Wifi, Phone, MessageSquare, ArrowRight, Shield, Users, Zap } from 'lucide-react'
+import { Shield, Users, Zap } from 'lucide-react'
 const Community = () => {
+    const dispatch = useDispatch()
+
     return (
         <div className='flex w-full py-20 md:py-32 items-center gap-8 justify-center'>
             <div className="max-w-custom mx-auto w-[90%] grid lg:grid-cols-custom gap-10 items-start lg:gap-20">
@@ -27,12 +33,14 @@ const Community = () => {
                         <div className="flex mt-4 gap-2 md:gap-4">
                             <span className=''>
                                 <button
-                                    // onClick={() => OnLoginModal()} 
+                                    onClick={() => dispatch(onLoginModal(""))}
 
                                     className="text-sm lg:text-sm px-4 lg:px-8 py-3 md:py-4 border rounded-full text-white bg-[#3e3aff] shadows">Get Started!</button>
                             </span>
                             <button
-                                //  onClick={OnRegisterModal}
+                                onClick={() =>
+                                    dispatch(onRegisterModal(""))
+                                }
                                 className="text-sm lg:text-sm px-4 lg:px-8 py-3 md:py-4 rounded-full shadows border">Learn More</button>
                         </div>
                     </div>
@@ -77,7 +85,7 @@ const Community = () => {
                         <div className="min-h-[160px] w-full flex relative">
                             <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#ffe1cc56] flex p-6 pt-8 flex-col justify-between gap-10 items-start">
                                 <span>
-                                    <Users className="h-10 items-start w-10 items-start text-blue-600 mb-4" />
+                                    <Users className="h-10 w-10 items-start text-blue-600 mb-4" />
                                 </span>
                                 <div className="flex flex-col gap-4">
 
@@ -105,7 +113,7 @@ const Community = () => {
                         <div className="min-h-full w-full flex relative">
                             <div className="min-h-[100%] z-10 rounded-[20px] w-full bg-[#e8f2fc61] flex p-6 pt-8 flex-col justify-between gap-10 items-start">
                                 <span>
-                                    <Zap className="h-10 items-start w-10 items-start text-blue-600 mb-4" />
+                                    <Zap className="h-10 items-start w-10  text-blue-600 mb-4" />
                                 </span>
                                 <div className="flex flex-col gap-4">
                                     <h3 className="text-3xl pb-6 border-b lg:text-4xl leading-[1.2] family2 text-dark family2">

@@ -14,7 +14,6 @@ const Header = () => {
             <div className="w-full max-w-custom mx-auto flex items-center justify-between">
                 <div className="flex items-center gap-8 lg:gap-12">
                     <Link href={'/'} className='text-lg lg:text-xl family2'>Phoneblock</Link>
-
                 </div>
 
                 <div className="hidden lg:flex flex-1 justify-center items-center gap-12">

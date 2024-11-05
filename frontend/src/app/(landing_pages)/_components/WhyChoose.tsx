@@ -1,10 +1,14 @@
 
+"use client"
 import React from 'react';
-import Image from 'next/image';
+import { onLoginModal } from '@/services/modalSlice';
+import { useDispatch } from 'react-redux'
 import AnimateTextWord from '@/components/common/AnimateTextWord';
 import { whyChooseUs } from '@/constants';
 
 const WhyChoose = () => {
+    const dispatch = useDispatch()
+
     return <div className='min-h-[500px] lg:min-h-[550px] py-16 flex lg:items-center gap-8 lg:justify-center'>
         <div className="max-w-custom mx-auto w-[90%] grid grid-cols-1 gap-12">
             <div className="w-full flex flex-col lg:items-center lg:justify-center gap-8">
@@ -53,6 +57,13 @@ const WhyChoose = () => {
 
                                     </span>
                                 </h4>
+                                <span className=''>
+                                    <button
+                                        onClick={() => dispatch(onLoginModal(""))}
+
+
+                                        className="text-sm lg:text-sm px-4 lg:px-8 py-3 md:py-4 border rounded-full text-white bg-[#3e3aff] shadows">Get Started!</button>
+                                </span>
                             </div>
                         })
                     }

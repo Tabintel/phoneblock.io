@@ -1,5 +1,4 @@
 import Hero from "./(landing_pages)/_components/Hero";
-import Achievement from "./(landing_pages)/_components/Achievement";
 import Community from "./(landing_pages)/_components/Community";
 import WhyChoose from "./(landing_pages)/_components/WhyChoose";
 import Newsletter from "../components/common/Newsletter";
@@ -14,10 +13,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Community />
-      {/* <TopCompanies /> */}
      
       <WhyChoose />
-      <Achievement />
       <Newsletter />
       <Footer />
     </SmoothScroll>
